@@ -1,7 +1,8 @@
 # Bo-duurzaam
 Frits Bien,
 Nick van der Tol,
-Daniel Dammers
+Daniel Dammers,
+Ismael abdi
 
 Frits categorie 2: 1) Een grafische weergave van de buitentemperatuur de afgelopen dagen en/of weken en/of maanden.
 
