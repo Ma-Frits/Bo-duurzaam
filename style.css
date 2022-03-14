@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background: white;
+    font-size: 1.6rem;
+    min-height: 100vh;
+
+}
+header{
+    height: 100%;
+    background: #CAF0F8;
+    padding: 2rem 4rem;
+}
+
+header > nav > ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.naam{
+    font-size: 6rem;
+}
+
+.tijdDatum, .logo{
+    font-size: 4rem;
+}
+
