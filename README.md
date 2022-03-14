@@ -3,6 +3,7 @@ Frits Bien,
 Nick van der Tol,
 Daniel Dammers,
 Milou Geervliet,
+Rishard Hamid(VMBO), 
 Ismael Abdi (VMBO)
 
 Frits 
