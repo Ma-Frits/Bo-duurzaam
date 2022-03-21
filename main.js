@@ -18,10 +18,7 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 
 // de grafriek Daniel
-
 var ctx = document.getElementById('myChart');
-
-
 
 var stars = [135850, 112122, 148825, 96939, 59763, 8080, 78900];
 var frameworks = ['week 1', 'week2', 'week 3', 'week4 ', 'week5', 'week 6', 'week 7'];
@@ -47,11 +44,10 @@ var myChart = new Chart(ctx, {
                 "rgba(0, 51, 102, 1)",
             ],
             borderWidth: 2,
-        }]
+        }],
     },
 });
 // eind grafriek Daniel
-
 
 //zonnenpanelen grafiek Nick
 var ctx = document.getElementById('js--zonnepanelen');
@@ -85,3 +81,25 @@ var myChart = new Chart(ctx, {
     },
 })
 //eind grafiek Nick
+
+// Waterverbuik Milou
+var ctx = document.getElementById('waterVerbruik per liter');
+var stars = [69.7, 185.7, 129.7, 245.7, 129.7, 305.7, 189.7];
+var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', ' Vrijdag', 'zaterdag', 'zondag'];
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: frameworks,
+        datasets: [{
+            label: 'Schatting van de hoeveelheid waterverbruik van 1 persoon per week',
+            data: stars,
+            backgroundColor: "rgba(54, 162, 235, 0.2)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1,
+            fill: true,
+            lineTension: 0
+        }],
+    },
+})
+// einde grafiek Milou

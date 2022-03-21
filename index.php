@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" defer></script>
     <script src="main.js" defer></script>
     <title>Dashboard</title>
 </head>
@@ -31,12 +32,13 @@
     <main>
         <section>
             <canvas class="myChart" id="myChart" width="2000" height="500"></canvas>
-            <canvas id="js--zonnepanelen" width="2000" height="500"></canvas>
-    	
+            <canvas class="zonnepanelen" id="js--zonnepanelen" width="2000" height="500"></canvas>
+            <canvas class="myChart" id="waterVerbruik" width="2000" height="500"></canvas>
         </section>
+        
+        <!-- Weerbericht -->
         <section>
-            <?php
-                    
+            <?php   
                 $json = file_get_contents("https://data.buienradar.nl/2.0/feed/json");
                 $data = json_decode($json);
                 $forecast = $data->forecast->fivedayforecast[0];
@@ -69,7 +71,12 @@
                 ?>
         </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <!-- waterverbruik -->
+        <section class="lijnGrafiekWater">
+        <canvas id="waterVerbruik"></canvas>
+        </section>
+        <script src="script.js" defer></script>
+        
 
     </main>
     <footer>

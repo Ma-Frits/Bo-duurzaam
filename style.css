@@ -44,3 +44,13 @@ header > nav > ul{
     padding: 3rem;
     
 }
+
+.zonnepanelen{
+    padding: 3rem;
+}
+
+/* waterverbruik */
+.lijnGrafiekWater{
+    max-width: 50rem;
+    margin: 0 auto;
+}
