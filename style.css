@@ -15,8 +15,13 @@ body{
 }
 header{
     height: 100%;
-    background: #CAF0F8;
+    background: #23d5f8;
     padding: 2rem 4rem;
+}
+.greenHomeLogo{
+    height: 10rem;
+    width: 100%;
+    border-radius: 2rem;
 }
 
 header > nav > ul{
@@ -35,3 +40,7 @@ header > nav > ul{
     font-size: 4rem;
 }
 
+.myChart{
+    padding: 3rem;
+    
+}
