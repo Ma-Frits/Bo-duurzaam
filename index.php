@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li class="naam">
-                    GreenHome
+                    Homeautic
                 </li>
                 <li class="tijdDatum">
                     <p id="js--datum"></p>
@@ -70,13 +70,6 @@
                     echo $weerBeschrijving;
                 ?>
         </section>
-
-        <!-- waterverbruik -->
-        <section class="lijnGrafiekWater">
-        <canvas id="waterVerbruik"></canvas>
-        </section>
-        <script src="script.js" defer></script>
-        
 
     </main>
     <footer>
