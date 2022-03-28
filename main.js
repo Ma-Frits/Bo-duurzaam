@@ -18,48 +18,76 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 
 // de grafriek Daniel
-var ctx = document.getElementById('myChart');
+var options = {
+    series: [{
+    name: 'Daniel',
+    data: [2903.23, 3176.87, 3143, 3190.90,]
+  }, {
+    name: 'nick',
+    data: [2335.25, 3141.50, 3157.00, 3173.29,]
+  }, {
+    name: 'Frits',
+    data: [11, 17, 15, 15,]
+  }, {
+    name: 'Milou',
+    data: [21, 7, 25, 13,]
+  }],
+    chart: {
+    type: 'bar',
+    height: 350,
+    stacked: true,
+    toolbar: {
+      show: true
+    },
+    zoom: {
+      enabled: true
+    }
+  },
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      legend: {
+        position: 'bottom',
+        offsetX: -10,
+        offsetY: 0
+      }
+    }
+  }],
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      borderRadius: 10
+    },
+  },
+  xaxis: {
+    type: 'datetime',
+    categories: ['week 1', 'week2', 'week3', 'week4',
+    ],
+  },
+  legend: {
+    position: 'right',
+    offsetY: 40
+  },
+  fill: {
+    opacity: 1
+  }
+  };
 
-var stars = [135850, 112122, 148825, 96939, 59763, 8080, 78900];
-var frameworks = ['week 1', 'week2', 'week 3', 'week4 ', 'week5', 'week 6', 'week 7'];
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+// // eind grafriek Daniel
+
+// //zonnenpanelen grafiek Nick
+var ctx = document.getElementById('js--zonnepanelen');
+var stars = [211, 184.98, 202.45, 206,15];
+var frameworks = ['Week 1', 'Week 2', 'Week 3', 'Week 4'];
+
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: frameworks,
         datasets: [{
-            label: "stroom verbruik per 1 week",
-            data: stars,
-            backgroundColor: [
-                "rgba(102, 255, 102, 0.2)",
-                "rgba(255, 102, 255, 0.2)",
-                "rgba(102, 204, 255, 0.2)",
-                "rgba(255, 0, 0, 0.2)",
-                "rgba(0, 51, 102, 0.2)",
-            ],
-            borderColor: [
-                "rgba(102, 255, 102, 1)",
-                "rgba(255, 102, 255, 1)",
-                "rgba(102, 204, 255, 1)",
-                "rgba(255, 0, 0, 1)",
-                "rgba(0, 51, 102, 1)",
-            ],
-            borderWidth: 2,
-        }],
-    },
-});
-// // eind grafriek Daniel
-
-// //zonnenpanelen grafiek Nick
-var ctx = document.getElementById('js--zonnepanelen');
-var stars = [120000, 80000, 60000, 80000, 9000, 80000, 60000];
-var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', ' Vrijdag', 'zaterdag', 'zondag'];
-
-var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: frameworks,
-        datasets: [{
-            label: 'Zonnepanelen opbrengst in kWh (dummy cijfers)',
+            label: 'Zonnepanelen opbrengst in kWh',
             data: stars,
             backgroundColor: [
                 "rgba(128,0,128)",
