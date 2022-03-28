@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" defer></script>
-    <script src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    
     <title>Dashboard</title>
 </head>
 
@@ -33,7 +33,7 @@
         <section>
             <canvas class="myChart" id="myChart" width="2000" height="500"></canvas>
             <canvas class="zonnepanelen" id="js--zonnepanelen" width="2000" height="500"></canvas>
-            <!-- <canvas class="myChart" id="waterVerbruik" width="2000" height="500"></canvas> -->
+            <canvas class="myChart" id="waterVerbruik" width="2000" height="500"></canvas>
         </section>
         
         <!-- Weerbericht -->
@@ -71,16 +71,8 @@
                 ?>
         </section>
 
-<<<<<<< HEAD
         <!-- waterverbruik -->
-        <!-- <section class="lijnGrafiekWater">
-        <canvas id="waterVerbruik"></canvas>
-        </section>
-        <script src="script.js" defer></script> -->
-        
 
-=======
->>>>>>> 600cf22a653c06686784f911e34613467a208347
     </main>
     <footer>
 
@@ -88,7 +80,7 @@
     </div>
 
 
-
+    <script src="main.js" defer></script>
 </body>
 
 </html>

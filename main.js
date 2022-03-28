@@ -47,9 +47,9 @@ var myChart = new Chart(ctx, {
         }],
     },
 });
-// eind grafriek Daniel
+// // eind grafriek Daniel
 
-//zonnenpanelen grafiek Nick
+// //zonnenpanelen grafiek Nick
 var ctx = document.getElementById('js--zonnepanelen');
 var stars = [120000, 80000, 60000, 80000, 9000, 80000, 60000];
 var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', ' Vrijdag', 'zaterdag', 'zondag'];
@@ -83,6 +83,8 @@ var myChart = new Chart(ctx, {
 //eind grafiek Nick
 
 // Waterverbuik Milou
+
+
 var ctx = document.getElementById('waterVerbruik');
 var stars = [69.7, 185.7, 129.7, 245.7, 129.7, 305.7, 189.7];
 var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', ' Vrijdag', 'zaterdag', 'zondag'];
