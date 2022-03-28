@@ -71,6 +71,7 @@
                 ?>
         </section>
 
+<<<<<<< HEAD
         <!-- waterverbruik -->
         <!-- <section class="lijnGrafiekWater">
         <canvas id="waterVerbruik"></canvas>
@@ -78,6 +79,8 @@
         <script src="script.js" defer></script> -->
         
 
+=======
+>>>>>>> 600cf22a653c06686784f911e34613467a208347
     </main>
     <footer>
 
