@@ -83,7 +83,7 @@ var myChart = new Chart(ctx, {
 //eind grafiek Nick
 
 // Waterverbuik Milou
-var ctx = document.getElementById('waterVerbruik per liter');
+var ctx = document.getElementById('waterVerbruik');
 var stars = [69.7, 185.7, 129.7, 245.7, 129.7, 305.7, 189.7];
 var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', ' Vrijdag', 'zaterdag', 'zondag'];
 

@@ -24,7 +24,7 @@
                 </li>
 
                 <li class="logo">
-                    <img class="greenHomeLogo" src="img/greenhome.webp" alt="het logo van green home">
+                    <img class="greenHomeLogo" src="img/logo.png" alt="het logo van green home">
                 </li>
             </ul>
         </nav>
@@ -33,7 +33,7 @@
         <section>
             <canvas class="myChart" id="myChart" width="2000" height="500"></canvas>
             <canvas class="zonnepanelen" id="js--zonnepanelen" width="2000" height="500"></canvas>
-            <canvas class="myChart" id="waterVerbruik" width="2000" height="500"></canvas>
+            <!-- <canvas class="myChart" id="waterVerbruik" width="2000" height="500"></canvas> -->
         </section>
         
         <!-- Weerbericht -->
@@ -71,6 +71,16 @@
                 ?>
         </section>
 
+<<<<<<< HEAD
+        <!-- waterverbruik -->
+        <!-- <section class="lijnGrafiekWater">
+        <canvas id="waterVerbruik"></canvas>
+        </section>
+        <script src="script.js" defer></script> -->
+        
+
+=======
+>>>>>>> 600cf22a653c06686784f911e34613467a208347
     </main>
     <footer>
 
