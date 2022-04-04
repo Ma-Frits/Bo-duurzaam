@@ -50,6 +50,11 @@
         <section class="section section--fourth">
 
         </section>
+        <section class="section section--fourth">
+            <div id="chart"></div>
+            <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
+            <canvas class="myChart" id="weerverwacht"></canvas>
+        </section>
     </main>
 
 </body>

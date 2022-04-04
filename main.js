@@ -10,7 +10,6 @@ setInterval(refreshTime, 1000);
 //weerbericht text
 var weerberichtText = document.getElementById("js--weer").innerHTML=["Weer van vandaag"]
 
-
 // de grafriek Daniel
 var options = {
   series: [{
