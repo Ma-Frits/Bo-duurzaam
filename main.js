@@ -8,14 +8,10 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 
 //weerbericht text
-<<<<<<< HEAD
-var weerberichtText = document.getElementById("js--weer").innerHTML = ["Weer van vandaag"]
-=======
-var weerberichtText = document.getElementById("js--weer").innerHTML=["Weer van vandaag"]
->>>>>>> 03d3166694055363d5f3ea88708358fae66de407
+var weerberichtText = document.getElementById("js--weer").innerHTML = ["Weer van vandaag"];
+var weerberichtText = document.getElementById("js--weer").innerHTML = ["Weer van vandaag"];
 
 // de grafriek Daniel
-
 var options = {
   series: [{
     name: 'Daniel',
@@ -138,7 +134,6 @@ let refreshTimer = window.setInterval(renderData, timeDelay); // timer data opvr
 
 // jouw persoonlijke URL
 const mijnDataURL = "https://data.softwaredeveloper.amsterdam/api/device/a39a5388/latest";
-
 const dataDiv = document.getElementById("dataDiv"); // hier komt de data
 
 async function getSensorData() {
@@ -168,4 +163,35 @@ async function renderData() {
 
 renderData(); // start immediately
 
-// begin dataAPI Frits
+
+// Weerbericht ophalen Nick
+const paragraph = document.getElementById("js--showname");
+const tekst = document.getElementById("js--showtekst");
+const graden = document.getElementById("js--graden");
+const wind = document.getElementById("js--wind");
+const iconcode = document.getElementById("js--weercode");
+const deweerimage = document.getElementById("js--image");
+
+
+let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=amsterdam,nl&APPID=b9ec424d25dece5f7dc9b2cd374f5806")
+    .then(
+        function (response) {
+            console.log("we got a response");
+            console.log(response);
+            return response.json();
+
+        })
+    .then(
+        function (realData) {
+            paragraph.innerHTML = realData.name;
+            tekst.innerHTML = realData.weather[0].main;
+            graden.innerHTML = Math.round(realData.main.temp - 272, 15);
+            wind.innerHTML = realData.wind.speed;
+            iconcode.innerHTML = realData.weather[0].icon;
+            console.log(iconcode.innerHTML = realData.weather[0].icon);
+            deweerimage.src = "http://openweathermap.org/img/w/" + iconcode.innerHTML + ".png";
+            console.log(deweerimage);
+        }
+);
+
+// einde weerbericht Nick

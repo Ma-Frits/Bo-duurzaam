@@ -32,6 +32,7 @@
         </nav>
 
     </header>
+    
 
     <main class="container">
         <section class="section section--first">
@@ -48,16 +49,32 @@
         </section>
         <section class="section section--fourth">
         </section>
+        
         <!-- data sensor gebruik -->
         <section>
             <div id="dataDiv"></div>
         </section>
         <section>
-            <div id="dataDiv1"></div>
+            <div id="dataDiv">
+            <IFRAME SRC="https://32934.hosts1.ma-cloud.nl/Duurzaam-Huis-2022-IOT-Sensordata-main/HTML/getdata.html" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
+            <IFRAME SRC="http://34034.hosts1.ma-cloud.nl/duurzaamhuis/HTML/getdata.html" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
+            <iframe src="https://33257.hosts1.ma-cloud.nl/duurzaam/getdata.html" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></iframe>
+            </div>
         </section>
+        <!-- buienradar Frits -->
         <section>
             <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
             <canvas></canvas>
+        </section>
+
+        <!-- weer Nick -->
+        <section>
+         <p id="js--showname">>Plaats</p>
+            <p id="js--showtekst">Weer</p>
+            <p id="js--graden">celsius</p>
+            <p id="js--wind">km/u</p> 
+            <p id="js--weercode">Imagecode</p>
+            <img id="js--image" src="" alt="">
         </section>
     </main>
 
