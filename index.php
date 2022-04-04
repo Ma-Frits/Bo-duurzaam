@@ -50,9 +50,9 @@
         <section class="section section--fourth">
 
         </section>
-        <section class="section section--fourth">
+        <section>
             <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
-            <canvas id="weerverwacht"></canvas>
+            <canvas></canvas>
         </section>
     </main>
 
