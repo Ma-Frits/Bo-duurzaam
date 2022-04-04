@@ -55,6 +55,10 @@
         <section>
             <div id="dataDiv1"></div>
         </section>
+        <section>
+            <IFRAME SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
+            <canvas></canvas>
+        </section>
     </main>
 
 </body>

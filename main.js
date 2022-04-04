@@ -8,7 +8,11 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 
 //weerbericht text
+<<<<<<< HEAD
 var weerberichtText = document.getElementById("js--weer").innerHTML = ["Weer van vandaag"]
+=======
+var weerberichtText = document.getElementById("js--weer").innerHTML=["Weer van vandaag"]
+>>>>>>> 03d3166694055363d5f3ea88708358fae66de407
 
 // de grafriek Daniel
 
