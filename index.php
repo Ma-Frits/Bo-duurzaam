@@ -40,15 +40,20 @@
             ?>
         </section>
         <section class="section section--zonnepanelen">
-            <div id="chart"></div>
+        <div id="chart-zonnepanelen"></div>
             <canvas class="zonnepanelen" id="js--zonnepanelen"></canvas>
         </section>
         <section class="section section--third">
-            <div id="chart"></div>
-            <canvas class="myChart" id="waterVerbruik"></canvas>
+            <canvas class="waterverbruik" id="js--waterVerbruik"></canvas>
         </section>
         <section class="section section--fourth">
-
+        </section>
+        <!-- data sensor gebruik -->
+        <section>
+            <div id="dataDiv"></div>
+        </section>
+        <section>
+            <div id="dataDiv1"></div>
         </section>
     </main>
 
@@ -56,4 +61,5 @@
 
 </html>
 
-</html>
+
+

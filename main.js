@@ -8,10 +8,10 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 
 //weerbericht text
-var weerberichtText = document.getElementById("js--weer").innerHTML=["Weer van vandaag"]
-
+var weerberichtText = document.getElementById("js--weer").innerHTML = ["Weer van vandaag"]
 
 // de grafriek Daniel
+
 var options = {
   series: [{
     name: 'Daniel',
@@ -67,8 +67,9 @@ var options = {
   }
 };
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
+var chart = new ApexCharts(document.getElementById("chart-zonnepanelen"), options);
 chart.render();
+
 // // eind grafriek Daniel
 
 // //zonnenpanelen grafiek Nick
@@ -105,9 +106,7 @@ var myChart = new Chart(ctx, {
 //eind grafiek Nick
 
 // Waterverbuik Milou
-
-
-var ctx = document.getElementById('waterVerbruik');
+var ctx = document.getElementById('js--waterVerbruik');
 var stars = [69.7, 185.7, 129.7, 245.7, 129.7, 305.7, 189.7];
 var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', ' Vrijdag', 'zaterdag', 'zondag'];
 
@@ -127,3 +126,42 @@ var myChart = new Chart(ctx, {
   },
 })
 // einde grafiek Milou
+
+// begin dataAPI Milou
+"use strict"
+const timeDelay = 10000; // time delay refresh data
+let refreshTimer = window.setInterval(renderData, timeDelay); // timer data opvragen van server
+
+// jouw persoonlijke URL
+const mijnDataURL = "https://data.softwaredeveloper.amsterdam/api/device/a39a5388/latest";
+
+const dataDiv = document.getElementById("dataDiv"); // hier komt de data
+
+async function getSensorData() {
+  let url = mijnDataURL;
+  try {
+    let response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function renderData() {
+  let measurementRaw = await getSensorData();
+  let measurement = measurementRaw.data[0];
+  console.log(measurement);
+
+  // Nieuwe Javascript date maken met de de datum en tijd van de meting
+  let datum = new Date(measurement.datum);
+
+  // De meting gegevens wegschrijven naar de div                
+  dataDiv.innerHTML = `<p>Sensor: ${measurement.sensor} 
+            </p><p>Temperature: ${measurement.value1}
+            </p><p> Humidity: ${measurement.value2}
+            </p><p> Heatindex: ${measurement.value3}</p>`;
+}
+
+renderData(); // start immediately
+
+// begin dataAPI Frits

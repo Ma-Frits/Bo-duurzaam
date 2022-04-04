@@ -25,18 +25,18 @@
     </figure>
     <span class="minTemp">
         <?php
-                    echo "Min" . " " . $minTemperatuur . "&#8451; <br>";
-                ?>
+            echo "Min" . " " . $minTemperatuur . "&#8451; <br>";
+        ?>
     </span>
     <span class="maxTemp">
         <?php
-                    echo "Max" . " " . $maxTemperatuur . "&#8451; <br>";
-                ?>
+            echo "Max" . " " . $maxTemperatuur . "&#8451; <br>";
+        ?>
     </span>
     <p class="weerBeschrijving">
         <?php
-                    echo $weerBeschrijving;
-                ?>
+            echo $weerBeschrijving;
+        ?>
 </body>
 
 </html>
