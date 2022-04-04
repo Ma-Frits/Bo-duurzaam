@@ -1,27 +1,21 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: 0;
 }
+
 html{
     font-size: 62.5%;
 }
 
 body{
-    background: white;
-    font-size: 1.6rem;
-    min-height: 100vh;
+    font-size: 2rem;
+}
 
-}
 header{
-    height: 100%;
-    background: #23d5f8;
-    padding: 2rem 4rem;
-}
-.greenHomeLogo{
-    height: 10rem;
-    width: 100%;
-    border-radius: 2rem;
+    background: #56BBF1;
+    list-style-type: none;
+    padding: 1rem;
 }
 
 header > nav > ul{
@@ -29,28 +23,52 @@ header > nav > ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.naam{
-    font-size: 6rem;
-}
-
-.tijdDatum, .logo{
     font-size: 4rem;
+    height: 10rem;
 }
 
-.myChart{
-    padding: 3rem;
-    
+.HomeauticLogo{
+    height: 10rem;
+    width: 100%;
 }
 
-.zonnepanelen{
-    padding: 3rem;
+.container{
+    height: 90vh;
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 1rem;
+    background: rgb(179, 255, 249);
 }
 
-/* waterverbruik */
-.lijnGrafiekWater{
-    max-width: 50rem;
-    margin: 0 auto;
+.section--first, .section--zonnepanelen, .section--third, .section--fourth{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1.5rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section--first{
+    grid-row: 1/5;
+    grid-column: 1/3;
+}
+
+.section--zonnepanelen{
+    grid-row: 1/5;
+    grid-column: 3/8;
+}
+
+.section--third{
+    grid-row: 1/5;
+    grid-column: 8/13;
+}
+
+.section--fourth{
+    grid-row: 5/9;
+    grid-column: 1/5;
 }
