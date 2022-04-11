@@ -127,43 +127,6 @@ var myChart = new Chart(ctx, {
 })
 // einde grafiek Milou
 
-// begin dataAPI Milou
-"use strict"
-const timeDelay = 10000; // time delay refresh data
-let refreshTimer = window.setInterval(renderData, timeDelay); // timer data opvragen van server
-
-// jouw persoonlijke URL
-const mijnDataURL = "https://data.softwaredeveloper.amsterdam/api/device/a39a5388/latest";
-const dataDiv = document.getElementById("dataDiv"); // hier komt de data
-
-async function getSensorData() {
-  let url = mijnDataURL;
-  try {
-    let response = await fetch(url);
-    return await response.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-async function renderData() {
-  let measurementRaw = await getSensorData();
-  let measurement = measurementRaw.data[0];
-  console.log(measurement);
-
-  // Nieuwe Javascript date maken met de de datum en tijd van de meting
-  let datum = new Date(measurement.datum);
-
-  // De meting gegevens wegschrijven naar de div                
-  dataDiv.innerHTML = `<p>Sensor: ${measurement.sensor} 
-            </p><p>Temperature: ${measurement.value1}
-            </p><p> Humidity: ${measurement.value2}
-            </p><p> Heatindex: ${measurement.value3}</p>`;
-}
-
-renderData(); // start immediately
-
-
 // Weerbericht ophalen Nick
 const paragraph = document.getElementById("js--showname");
 const tekst = document.getElementById("js--showtekst");
@@ -174,24 +137,22 @@ const deweerimage = document.getElementById("js--image");
 
 
 let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=amsterdam,nl&APPID=b9ec424d25dece5f7dc9b2cd374f5806")
-    .then(
-        function (response) {
-            console.log("we got a response");
-            console.log(response);
-            return response.json();
+  .then(
+    function (response) {
+      console.log("we got a response");
+      console.log(response);
+      return response.json();
 
-        })
-    .then(
-        function (realData) {
-            paragraph.innerHTML = realData.name;
-            tekst.innerHTML = realData.weather[0].main;
-            graden.innerHTML = Math.round(realData.main.temp - 272, 15);
-            wind.innerHTML = realData.wind.speed;
-            iconcode.innerHTML = realData.weather[0].icon;
-            console.log(iconcode.innerHTML = realData.weather[0].icon);
-            deweerimage.src = "http://openweathermap.org/img/w/" + iconcode.innerHTML + ".png";
-            console.log(deweerimage);
-        }
-);
+    })
+  .then(
+    function (realData) {
+      paragraph.innerHTML = realData.name;
+      tekst.innerHTML = realData.weather[0].main;
+      graden.innerHTML = Math.round(realData.main.temp - 272, 15) + '&deg;' + "C";
+      wind.innerHTML = realData.wind.speed + " km/u"; 
+      iconcode.innerText = realData.weather[0].icon;
+      deweerimage.src = "http://openweathermap.org/img/w/" + iconcode.innerHTML + ".png";
+    }
+  );
 
 // einde weerbericht Nick
