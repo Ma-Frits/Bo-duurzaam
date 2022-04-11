@@ -82,8 +82,27 @@
             <h2>Buienradar voor de aankomende dagen</h2>
             <IFRAME class="buienradar" SRC="https://gadgets.buienradar.nl/gadget/radarfivedays" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=256 HEIGHT=406></IFRAME>
         </section>
-        <section class="section section--seven">VMBO</section>
-        <section class="section section--eight">VMBO</section>
+        <section class="section section--seven">
+            <h2>Rishad</h2>
+            <p> 
+                School temperatuur: <br>
+                temperatuur: -10.70 Celcius <br>
+                Humidity: 144.00% <br>
+                Heatindex: -12.10 <br>
+                Lichtsensor eenheid Lumen: 15
+            </p>
+        </section>
+        <section class="section section--eight">
+            <h2>Ricardo</h2>
+            <p>
+                Datum - Stand (dag) in kWh: <br> 
+                27/03/2022 - 006369 - 007627 <br> 
+                28/03/2022 - 006476 - 008684 <br> 
+                29/03/2022 - 007247 - 007679 <br> 
+                30/03/2022 - 006472 - 008384 <br> 
+                31/03/2022 - 007742 - 008279 <br> 
+            </p>
+        </section>
 
     </main>
 
